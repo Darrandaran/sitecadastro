@@ -1,0 +1,49 @@
+<html lang="en">
+</head>
+<body>
+    <h1>Cadastro de Usuarion</h1>
+    <form id="registration-form">
+        <label for="username">Nome do usuario:</label>
+        <input type="text" id="username required"> <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required><br><br>
+
+        <button type="submit">Cadastrar</button>
+     </form>
+
+<script>
+    const registrationForm = document.getElementById('registration-form');
+    const registrationResult = document.getElementById('registration-result');
+
+    registrationForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const username = Document.getElementById('username').value;
+        const email = Document.getElementById('email').value;
+        const password = Document.getElementById('password').value;
+
+        //Log dos dados no console
+        console.log('Dados do formulário:');
+        console.log('Nme do usuario:', username);
+        console.log('email:', email);
+        console.log('senha:', password);
+
+        //aquivc pode eviar dados para um servidor pra procesamento
+        //exemplo, usando metodo fetch()para fazer solicitação  POST 
+        
+        //simulação de sucesso(substitua por lógica real)
+
+        const sucessMessage = `cadastro realizado com sucesso! Bem-vindo', ${username}!`;
+        registrationResult.textcontent = sucessMessage; 
+    });
+</script>
+    
+</body>
+
+
+
+</html>
