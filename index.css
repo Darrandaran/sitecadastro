@@ -1,149 +1,179 @@
+/*
+Main color
+#444c76
+
+Palette
+#637cb3
+
+#0c0c1b
+
+#2b3763
+
+#7b7b8c
+
+#9ca3b2
+
+#434c8c
+
+#484e77
+
+#848494
+
+#5c5e74
+
+#1c244c
+
+Download*/
+
+
 :root{
-  --cor-texto:#fafbf6;
-  --cor_fundo_menu: ;
-  --cor_hamburger: ; 
-}
-body
-{
-  margin: 0;
-  padding: 0;
+    --cor-texto:#fafbf6;
+    --cor_fundo_menu: ;
+    --cor_hamburger: ; 
+  }
+  body
+  {
+    margin: 0;
+    padding: 0;
+    
+    background: #100F1F;
+    color: var(--cor-texto);
+  }
   
-  background: #100F1F;
-  color: var(--cor-texto);
-}
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: #414A8B;
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+  }
   
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: #414A8B;
-}
-
-
-#menuToggle input  /*esse é o botao que verifica se o menu está sendo ativado ou não*/
-{
-  display: block;
-  width: 40px; /*posição do hamburger*/
-  height: 32px;
-  position: absolute; /*posição entre o hamburger e o butão*/
-  top: -7px;
-  left: -7px;
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #000;
+    
+    transition: color 0.3s ease;
+  }
   
-  cursor: pointer;/*estilo do mause na tela*/
+  #menuToggle a:hover
+  {
+    color: #000;
+  }
   
-  opacity: 0;
-  z-index: 2; /* and place it over the hamburger *//*escolhe a posição do elemento*/
   
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span /*menu hamburger*/
-{
-  display: block;
-  width: 33px;
-  height: 5px;
-  margin-bottom: 5px;
-  position: relative;
+  #menuToggle input  /*esse é o botao que verifica se o menu está sendo ativado ou não*/
+  {
+    display: block;
+    width: 40px; /*posição do hamburger*/
+    height: 32px;
+    position: absolute; /*posição entre o hamburger e o butão*/
+    top: -7px;
+    left: -7px;
+    
+    cursor: pointer;/*estilo do mause na tela*/
+    
+    opacity: 0;
+    z-index: 2; /* and place it over the hamburger *//*escolhe a sobreposição do elemento*/
+    
+  }
   
-  background: #414A8B;/*aqui é a cor do hamburger antes de abrir*/
-  border-radius: 3px;
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span /*menu hamburger*/
+  {
+    display: block;
+    width: 33px;
+    height: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #414A8B;/*aqui é a cor do hamburger antes de abrir*/
+    border-radius: 3px;
+    
+    z-index: 1;/*sobreposição dnv*/
+    
+    transform-origin: 1px 1px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),/*velocidade da transição do hamburger para o x*/
+      /*transição do H para o x*/
+                background 0.5s cubic-bezier(0.77,0.2,0.05,5.90),/*transição de cores*/
+                opacity 0.55s ease;
+  }
   
-  z-index: 1;
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
   
-  transform-origin: 4px 0px;
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #94797d;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #94797d;
+  }
   
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
   
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu
+  {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: #9ca3b2;/*cor fundo menu*/
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+  
