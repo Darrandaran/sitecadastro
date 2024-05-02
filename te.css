@@ -1,0 +1,48 @@
+.primcipal{
+    position: relative;
+    background-color: burlywood;
+    display: flex;
+}
+
+.azul{
+    position:absolute;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    right: 50px;
+}
+.laranja{
+    position:absolute;
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    right: 50px;
+}
+.verde{
+    position:absolute;
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    right: 150px;
+}
+.purple{
+    position:absolute;
+    background-color: purple;
+    height: 100px;
+    width: 100px;
+    right: 200px;
+}
+.amarelo{
+    position:absolute;
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    right: 250px;
+}
+.chocolate{
+    position:absolute;
+    background-color: chocolate;
+    height: 100px;
+    width: 100px;
+    right: 300px;
+}
