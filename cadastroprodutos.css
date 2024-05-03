@@ -1,18 +1,40 @@
 body{
     background: #202020;
     color: antiquewhite;/*cor do texto*/
+
 }
-    h1{
+    .form{
+        background-color: #8B0000;
+        text-align: center;
         justify-content: center;
         align-items: center;
-        display: flex;
-        color: aqua;
+        padding: 30px;
+        max-width: 750px;
+        margin:200px auto;
+        font-size: 16px;
+    }
+    .form h1{
+        color:#180101;
+    }
+    .form h2{
+        color: #180101;
+    }
+    .form button {
+        background-color:#4d0000 ;
+        border: solid;
+        color: antiquewhite;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
     }
 
-    .form{
-        background-color: red;
-        justify-content: center;
-        align-items: center;
-        display: flex;
+
+    table tbody tr:nth-child(odd){
+        background-color: #a51e1e;
         
+    }
+    table tbody tr:nth-child(even){
+        background-color: #1b0101;
     }
